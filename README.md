@@ -4,6 +4,8 @@
 - La till data i databasen
 - La till JsonTask.java och kopierade koden
 - La till koden till JsonTask i mainactivity
+- La till arraylista
+- La till recyclerview
 - 
 
 **Skriv din rapport här!**
