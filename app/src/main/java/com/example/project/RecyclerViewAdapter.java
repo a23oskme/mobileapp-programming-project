@@ -15,11 +15,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
 
     Context context;
-    ArrayList<Mountain> mountainList;
+    ArrayList<Birds> birdList;
 
-    public RecyclerViewAdapter(Context context, ArrayList<Mountain> mountainList) {
+    public RecyclerViewAdapter(Context context, ArrayList<Birds> birdList) {
         this.context = context;
-        this.mountainList = mountainList;
+        this.birdList = birdList;
     }
 
     @NonNull
@@ -33,21 +33,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder myViewHolder, int position) {
-        myViewHolder.textView.setText(mountainList.get(position).getName());
-        myViewHolder.locationView.setText(mountainList.get(position).getLocation());
-        myViewHolder.heightView.setText(mountainList.get(position).getHeight());
+        myViewHolder.textView.setText(birdList.get(position).getName());
+        myViewHolder.locationView.setText(birdList.get(position).getLocation());
+        myViewHolder.weightView.setText(birdList.get(position).getHeight());
     }
 
     @Override
     public int getItemCount() {
-        return mountainList.size();
+        return birdList.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView textView;
         TextView locationView;
-        TextView heightView;
+        TextView weightView;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -55,7 +55,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             textView = itemView.findViewById(R.id.textView);
             locationView = itemView.findViewById(R.id.locationView);
-            heightView = itemView.findViewById(R.id.heightView);
+            weightView = itemView.findViewById(R.id.weightView);
 
         }
     }

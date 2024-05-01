@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
             RecyclerView recyclerView =findViewById(R.id.myRecyclerView);
 
 
-            ArrayList<Mountain> mountainList = new ArrayList<>();
+            ArrayList<Birds> birdList = new ArrayList<>();
 
             Log.d("MainActivity", json);
             for (int i = 0; i < jsonArr.length(); i++) {
@@ -47,13 +47,13 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
 
                 String name = jsonObj.getString("name");
                 String location = jsonObj.getString("location");
-                int height = jsonObj.getInt("size");
+                int weight = jsonObj.getInt("size");
 
-                mountainList.add(new Mountain(name, location, height));
+                birdList.add(new Birds(name, location, weight));
 
             }
 
-            RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, mountainList);
+            RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, birdList);
             recyclerView.setAdapter(adapter);
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

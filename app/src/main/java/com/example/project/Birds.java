@@ -1,21 +1,21 @@
 package com.example.project;
 
-public class Mountain {
+public class Birds {
 
     private String name;
     private String location;
-    private int height;
+    private int weight;
 
     // default constructor
-    public Mountain() {
+    public Birds() {
         name = "Saknar namn";
         location = "Saknar plats";
-        height = -1;
+        weight = -1;
     }
-    public Mountain(String n, String l, int h) {
+    public Birds(String n, String l, int h) {
         name = n;
         location = l;
-        height = h;
+        weight = h;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Mountain {
         return "Mountain{" +
                 "name='" + name + '\'' +
                 ", location='" + location + '\'' +
-                ", height=" + height +
+                ", height=" + weight +
                 '}';
     }
 
@@ -48,7 +48,7 @@ public class Mountain {
     }*/
 
     public String getHeight() {
-        return ""+height;
+        return ""+weight;
     }
 
 }
