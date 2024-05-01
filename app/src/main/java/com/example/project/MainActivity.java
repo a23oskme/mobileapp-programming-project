@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
-    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23oskme";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
