@@ -14,7 +14,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener {
 
     private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
 
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         //setSupportActionBar(toolbar);
 
         //new JsonFile(this, this).execute(JSON_FILE);
-        new JsonTask(this).execute(JSON_URL);
+        new JsonTask((JsonTask.JsonTaskListener) this).execute(JSON_URL);
 
     }
 
