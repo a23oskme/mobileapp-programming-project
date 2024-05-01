@@ -2,6 +2,9 @@
 # Rapport
 
 - La till data i databasen
+- La till JsonTask.java och kopierade koden
+- La till koden till JsonTask i mainactivity
+- 
 
 **Skriv din rapport här!**
 
