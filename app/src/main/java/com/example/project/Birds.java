@@ -5,25 +5,28 @@ public class Birds {
     private String name;
     private String location;
     private int weight;
-
+    private String latin;
     // default constructor
     public Birds() {
         name = "Saknar namn";
         location = "Saknar plats";
         weight = -1;
+        latin = "Saknar latinskt namn";
     }
-    public Birds(String n, String l, int h) {
+    public Birds(String n, String l, int h, String m) {
         name = n;
         location = l;
         weight = h;
+        latin = m;
     }
 
     @Override
     public String toString() {
-        return "Mountain{" +
+        return "Birds{" +
                 "name='" + name + '\'' +
                 ", location='" + location + '\'' +
-                ", height=" + weight +
+                ", weight=" + weight + '\'' +
+                ", latin='" + latin +
                 '}';
     }
 
@@ -47,8 +50,13 @@ public class Birds {
         height = h;
     }*/
 
-    public String getHeight() {
+    public String getWeight() {
         return ""+weight;
+    }
+
+
+    public String getLatin() {
+        return latin;
     }
 
 }

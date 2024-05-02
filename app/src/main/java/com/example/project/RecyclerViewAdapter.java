@@ -35,7 +35,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull RecyclerViewAdapter.MyViewHolder myViewHolder, int position) {
         myViewHolder.textView.setText(birdList.get(position).getName());
         myViewHolder.locationView.setText(birdList.get(position).getLocation());
-        myViewHolder.weightView.setText(birdList.get(position).getHeight());
+        myViewHolder.weightView.setText(birdList.get(position).getWeight());
+        myViewHolder.latinView.setText(birdList.get(position).getLatin());
     }
 
     @Override
@@ -48,6 +49,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView textView;
         TextView locationView;
         TextView weightView;
+        TextView latinView;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -56,6 +58,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textView = itemView.findViewById(R.id.textView);
             locationView = itemView.findViewById(R.id.locationView);
             weightView = itemView.findViewById(R.id.weightView);
+            latinView = itemView.findViewById(R.id.latinView);
 
         }
     }
