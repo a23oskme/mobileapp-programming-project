@@ -1,7 +1,10 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -28,6 +31,23 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         //new JsonFile(this, this).execute(JSON_FILE);
         new JsonTask((JsonTask.JsonTaskListener) this).execute(JSON_URL);
 
+        // hitta knappen
+        Button button = findViewById(R.id.myButton);
+
+        // skapa clicklistener
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // skapa en intent för att öppna SecondActivity
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+
+                // lägg till data i intent
+                //intent.putExtra("message", "Hej!");
+
+                // starta SecondActivity
+                startActivity(intent);
+            }
+        });
     }
 
 
