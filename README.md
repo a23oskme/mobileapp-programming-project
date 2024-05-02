@@ -10,6 +10,8 @@
 - La till RecyclerViewAdapter
 - Gav permission till internet
 - La till mer data från webbtjänst (vetenskapligt namn)
+- Gjorde wikipedia länkarna klickbara
+- 
 
 
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.

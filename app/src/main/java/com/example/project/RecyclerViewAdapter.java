@@ -37,6 +37,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         myViewHolder.locationView.setText(birdList.get(position).getLocation());
         myViewHolder.weightView.setText(birdList.get(position).getWeight());
         myViewHolder.latinView.setText(birdList.get(position).getLatin());
+        myViewHolder.wikiView.setText(birdList.get(position).getWikiLink());
     }
 
     @Override
@@ -50,6 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView locationView;
         TextView weightView;
         TextView latinView;
+        TextView wikiView;
 
 
         public MyViewHolder(@NonNull View itemView) {
@@ -59,6 +61,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             locationView = itemView.findViewById(R.id.locationView);
             weightView = itemView.findViewById(R.id.weightView);
             latinView = itemView.findViewById(R.id.latinView);
+            wikiView = itemView.findViewById(R.id.wikiView);
 
         }
     }

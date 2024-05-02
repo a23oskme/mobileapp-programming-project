@@ -49,9 +49,10 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
                 String location = jsonObj.getString("location");
                 int weight = jsonObj.getInt("size");
                 String latin = jsonObj.getString("company");
-                Log.d(latin, "onPostExecute: hejsan");
+                String wikiLink = jsonObj.getString("auxdata");
+                //Log.d(latin, "onPostExecute: hejsan");
 
-                birdList.add(new Birds(name, location, weight, latin));
+                birdList.add(new Birds(name, location, weight, latin, wikiLink));
 
             }
 

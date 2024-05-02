@@ -6,18 +6,21 @@ public class Birds {
     private String location;
     private int weight;
     private String latin;
+    private String wikiLink;
     // default constructor
     public Birds() {
         name = "Saknar namn";
         location = "Saknar plats";
         weight = -1;
         latin = "Saknar latinskt namn";
+        wikiLink = "Länk saknas";
     }
-    public Birds(String n, String l, int h, String m) {
+    public Birds(String n, String l, int h, String m, String w) {
         name = n;
         location = l;
         weight = h;
         latin = m;
+        wikiLink = w;
     }
 
     @Override
@@ -26,7 +29,8 @@ public class Birds {
                 "name='" + name + '\'' +
                 ", location='" + location + '\'' +
                 ", weight=" + weight + '\'' +
-                ", latin='" + latin +
+                ", latin='" + latin + '\'' +
+                ", link='" + wikiLink +
                 '}';
     }
 
@@ -57,6 +61,9 @@ public class Birds {
 
     public String getLatin() {
         return latin;
+    }
+    public String getWikiLink() {
+        return wikiLink;
     }
 
 }
