@@ -15,6 +15,7 @@
 - Fixade elevation och la till kompatibel padding för skuggning
 - La till en knapp
 - Skapade SecondActivity och layout-fil och la till den i AndroidManifest
+- La till knapp i SecondActivity och skapade en clicklistener för att komma tillbaka till MainActivity
 
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
 

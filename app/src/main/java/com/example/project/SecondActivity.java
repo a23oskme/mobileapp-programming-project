@@ -1,7 +1,10 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,15 +19,20 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        String String = "HEJ";
-        Log.d(String, "onCreate: Öppnar second");
-        // hitta textview
-        //TextView textView = findViewById(R.id.second_activity_textview);
+        // hitta knappen för att komma tillbaka till MainActivity
+        Button button = findViewById(R.id.backButton);
 
-        // hämta den skickade strängen
-        //String message = getIntent().getStringExtra("message");
+        // skapa clicklistener
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // skapa en intent för att öppna MainActivity
+                Intent intent = new Intent(SecondActivity.this, MainActivity.class);
 
-        // sätt texten i textview
-        //textView.setText(message);
+
+                // starta MainActivity
+                startActivity(intent);
+            }
+        });
     }
 }
