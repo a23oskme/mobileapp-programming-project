@@ -39,7 +39,7 @@ public class Birds {
     }*/
 
     public String getName() {
-        return name;
+        return String.format("%-20s %-30s", "Namn:", name);
     }
 
     /*public void setLocation(String l) {
@@ -47,7 +47,7 @@ public class Birds {
     }*/
 
     public String getLocation() {
-        return location;
+        return String.format("%-20s %-30s", "Finns i Sverige:", location);
     }
 
     /*public void setHeight(int h) {
@@ -55,15 +55,15 @@ public class Birds {
     }*/
 
     public String getWeight() {
-        return ""+weight;
+        return String.format("%-20s %-30s", "Vikt (g):", weight);
     }
 
 
     public String getLatin() {
-        return latin;
+        return String.format("%-20s %-30s", "Vetenskapligt namn:" , latin);
     }
     public String getWikiLink() {
-        return wikiLink;
+        return "Källa: " + wikiLink;
     }
 
 }

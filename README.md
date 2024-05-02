@@ -11,7 +11,8 @@
 - Gav permission till internet
 - La till mer data från webbtjänst (vetenskapligt namn)
 - Gjorde wikipedia länkarna klickbara
-- 
+- Fixa layout för text, ändrade till mono typsnitt och italic för länk
+- Fixade elevation och la till kompatibel padding för skuggning
 
 
 Programkod ska se ut som exemplet nedan. Koden måste vara korrekt indenterad då den blir lättare att läsa vilket gör det lättare att hitta syntaktiska fel.
