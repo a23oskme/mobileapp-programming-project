@@ -1,58 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:background="#415a77"
     tools:context=".SecondActivity">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/aboutCardView"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/backButton"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:cardBackgroundColor="#8d99ae"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="2dp"
-        tools:layout_editor_absoluteX="1dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="8dp">
-
-            <TextView
-                android:id="@+id/aboutTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HEJ"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:typeface="monospace" />
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/backButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tillbaka"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aboutCardView"
-        tools:layout_editor_absoluteX="159dp" />
+        android:text="Tillbaka" />
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

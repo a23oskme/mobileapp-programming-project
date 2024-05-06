@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -18,6 +21,19 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
+        // hitta webview
+        WebView webView = findViewById(R.id.webView);
+        // koppla webviewclient till webview
+        webView.setWebViewClient(new WebViewClient());
+        // hämta inställningar för webview
+        WebSettings webSettings = webView.getSettings();
+        // aktivera javascript
+        webSettings.setJavaScriptEnabled(true);
+        // ladda in intern webbsida
+        webView.loadUrl("file:///android_asset/about.html");
+
+
 
         // hitta knappen för att komma tillbaka till MainActivity
         Button button = findViewById(R.id.backButton);

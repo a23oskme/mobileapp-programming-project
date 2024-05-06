@@ -41,9 +41,6 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
                 // skapa en intent för att öppna SecondActivity
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
 
-                // lägg till data i intent
-                //intent.putExtra("message", "Hej!");
-
                 // starta SecondActivity
                 startActivity(intent);
             }

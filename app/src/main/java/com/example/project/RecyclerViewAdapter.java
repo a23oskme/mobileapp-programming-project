@@ -62,7 +62,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             weightView = itemView.findViewById(R.id.weightView);
             latinView = itemView.findViewById(R.id.latinView);
             wikiView = itemView.findViewById(R.id.wikiView);
-
         }
     }
 }
